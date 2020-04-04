@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		FCC1666224378CC200BFBC05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1666124378CC200BFBC05 /* AppDelegate.swift */; };
 		FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1666324378CC200BFBC05 /* SceneDelegate.swift */; };
-		FCC1666624378CC200BFBC05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1666524378CC200BFBC05 /* ViewController.swift */; };
-		FCC1666924378CC200BFBC05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC1666724378CC200BFBC05 /* Main.storyboard */; };
+		FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1666524378CC200BFBC05 /* LoginVC.swift */; };
+		FCC1666924378CC200BFBC05 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC1666724378CC200BFBC05 /* Login.storyboard */; };
 		FCC1666B24378CC300BFBC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC1666A24378CC300BFBC05 /* Assets.xcassets */; };
 		FCC1666E24378CC300BFBC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC1666C24378CC300BFBC05 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +19,8 @@
 		FCC1665E24378CC200BFBC05 /* Covid19 Monitoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid19 Monitoring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC1666124378CC200BFBC05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC1666324378CC200BFBC05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCC1666524378CC200BFBC05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FCC1666824378CC200BFBC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCC1666524378CC200BFBC05 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FCC1666824378CC200BFBC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		FCC1666A24378CC300BFBC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCC1666D24378CC300BFBC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCC1666F24378CC300BFBC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +56,47 @@
 		FCC1666024378CC200BFBC05 /* Covid19 Monitoring */ = {
 			isa = PBXGroup;
 			children = (
-				FCC1666124378CC200BFBC05 /* AppDelegate.swift */,
-				FCC1666324378CC200BFBC05 /* SceneDelegate.swift */,
-				FCC1666524378CC200BFBC05 /* ViewController.swift */,
-				FCC1666724378CC200BFBC05 /* Main.storyboard */,
+				FCC1667B24380ED900BFBC05 /* Login */,
+				FCC1667A24380E9400BFBC05 /* SupportingFiles */,
 				FCC1666A24378CC300BFBC05 /* Assets.xcassets */,
-				FCC1666C24378CC300BFBC05 /* LaunchScreen.storyboard */,
 				FCC1666F24378CC300BFBC05 /* Info.plist */,
 			);
 			path = "Covid19 Monitoring";
+			sourceTree = "<group>";
+		};
+		FCC1667A24380E9400BFBC05 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FCC1666C24378CC300BFBC05 /* LaunchScreen.storyboard */,
+				FCC1666124378CC200BFBC05 /* AppDelegate.swift */,
+				FCC1666324378CC200BFBC05 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FCC1667B24380ED900BFBC05 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FCC1667C24380EDD00BFBC05 /* View */,
+				FCC1667D24380EE200BFBC05 /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FCC1667C24380EDD00BFBC05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCC1666724378CC200BFBC05 /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCC1667D24380EE200BFBC05 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCC1666524378CC200BFBC05 /* LoginVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +159,7 @@
 			files = (
 				FCC1666E24378CC300BFBC05 /* LaunchScreen.storyboard in Resources */,
 				FCC1666B24378CC300BFBC05 /* Assets.xcassets in Resources */,
-				FCC1666924378CC200BFBC05 /* Main.storyboard in Resources */,
+				FCC1666924378CC200BFBC05 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC1666624378CC200BFBC05 /* ViewController.swift in Sources */,
+				FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */,
 				FCC1666224378CC200BFBC05 /* AppDelegate.swift in Sources */,
 				FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,12 +179,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FCC1666724378CC200BFBC05 /* Main.storyboard */ = {
+		FCC1666724378CC200BFBC05 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FCC1666824378CC200BFBC05 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		FCC1666C24378CC300BFBC05 /* LaunchScreen.storyboard */ = {
