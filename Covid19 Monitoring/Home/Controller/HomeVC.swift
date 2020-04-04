@@ -11,11 +11,15 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
+    var dataLocalStatus = [LocalStatusModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
         setupRegisterNib()
+        loadData()
     }
 
     private func setupDelegate() {
@@ -26,6 +30,17 @@ class HomeVC: UIViewController {
     private func setupRegisterNib() {
         collectionView.register(UINib(nibName: "TitleCell", bundle: nil), forCellWithReuseIdentifier: "TitleCell")
         collectionView.register(UINib(nibName: "LocalStatusCell", bundle: nil), forCellWithReuseIdentifier: "LocalStatusCell")
+    }
+
+    private func loadData() {
+        ApiService.shared.getDataFromCountryName(countryName: "Indonesia") { (data) in
+            self.dataLocalStatus.append(LocalStatusModel(counter: data.cases, status: POSITIF))
+            self.dataLocalStatus.append(LocalStatusModel(counter: data.active, status: DALAM_PERAWATAN))
+            self.dataLocalStatus.append(LocalStatusModel(counter: data.recovered, status: SEMBUH))
+            self.dataLocalStatus.append(LocalStatusModel(counter: data.deaths, status: MENINGGAL))
+            self.collectionView.reloadData()
+            self.activityIndicator.isHidden = true
+        }
     }
 }
 
@@ -38,7 +53,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 1:
-            return 4
+            return dataLocalStatus.count
         default:
             return 1
         }
@@ -50,7 +65,8 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCell", for: indexPath)
             return cell
         case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LocalStatusCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LocalStatusCell", for: indexPath) as! LocalStatusCell
+            cell.parseData(data: dataLocalStatus[indexPath.row])
             return cell
         default:
             return UICollectionViewCell()

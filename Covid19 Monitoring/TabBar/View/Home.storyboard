@@ -50,6 +50,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ea0-MF-Bpt">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -66,6 +70,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Beranda" image="house.fill" catalog="system" id="6cy-dX-wZt"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Ea0-MF-Bpt" id="0Nf-jb-yTH"/>
                         <outlet property="collectionView" destination="Gmf-Ep-aT7" id="4v3-zb-RC2"/>
                     </connections>
                 </viewController>

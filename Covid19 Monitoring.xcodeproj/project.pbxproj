@@ -22,6 +22,11 @@
 		FCC1669A243879FB00BFBC05 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC16699243879FB00BFBC05 /* TitleCell.xib */; };
 		FCC1669E2438804200BFBC05 /* LocalStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC1669D2438804200BFBC05 /* LocalStatusCell.xib */; };
 		FCC166A024388C3300BFBC05 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1669F24388C3300BFBC05 /* CardView.swift */; };
+		FCC166A324389C0E00BFBC05 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A224389C0D00BFBC05 /* ApiService.swift */; };
+		FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A5243937A800BFBC05 /* CovidCountryModel.swift */; };
+		FCC166A924393CB400BFBC05 /* LocalStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A824393CB400BFBC05 /* LocalStatusModel.swift */; };
+		FCFFFFD624393FC000650FEB /* LocalStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */; };
+		FCFFFFD82439451600650FEB /* LocalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD72439451600650FEB /* LocalStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		FCC16699243879FB00BFBC05 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		FCC1669D2438804200BFBC05 /* LocalStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalStatusCell.xib; sourceTree = "<group>"; };
 		FCC1669F24388C3300BFBC05 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FCC166A224389C0D00BFBC05 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FCC166A5243937A800BFBC05 /* CovidCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCountryModel.swift; sourceTree = "<group>"; };
+		FCC166A824393CB400BFBC05 /* LocalStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatusModel.swift; sourceTree = "<group>"; };
+		FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatusCell.swift; sourceTree = "<group>"; };
+		FCFFFFD72439451600650FEB /* LocalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 				FCC166902438756300BFBC05 /* Home */,
 				FCC1668B2438741300BFBC05 /* TabBar */,
 				FCC1667B24380ED900BFBC05 /* Login */,
+				FCC166A124389BAF00BFBC05 /* Networks */,
 				FCC1668324381EC000BFBC05 /* Helpers */,
 				FCC1667E24380F8600BFBC05 /* CustomViews */,
 				FCC1667A24380E9400BFBC05 /* SupportingFiles */,
@@ -166,6 +177,8 @@
 		FCC166902438756300BFBC05 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FCFFFFD92439461F00650FEB /* Constants */,
+				FCC166A724393C7700BFBC05 /* Model */,
 				FCC166922438757300BFBC05 /* View */,
 				FCC166912438756D00BFBC05 /* Controller */,
 			);
@@ -176,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC16697243876DD00BFBC05 /* HomeVC.swift */,
+				FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +202,39 @@
 				FCC1669D2438804200BFBC05 /* LocalStatusCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FCC166A124389BAF00BFBC05 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				FCC166A42439352300BFBC05 /* Model */,
+				FCC166A224389C0D00BFBC05 /* ApiService.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		FCC166A42439352300BFBC05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCC166A5243937A800BFBC05 /* CovidCountryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCC166A724393C7700BFBC05 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCC166A824393CB400BFBC05 /* LocalStatusModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCFFFFD92439461F00650FEB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FCFFFFD72439451600650FEB /* LocalStatus.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,14 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC166A924393CB400BFBC05 /* LocalStatusModel.swift in Sources */,
 				FCC1668024380FC000BFBC05 /* CustomUIButton.swift in Sources */,
 				FCC166822438103B00BFBC05 /* CustomUIView.swift in Sources */,
+				FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */,
 				FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */,
 				FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */,
 				FCC1666224378CC200BFBC05 /* AppDelegate.swift in Sources */,
+				FCFFFFD82439451600650FEB /* LocalStatus.swift in Sources */,
+				FCC166A324389C0E00BFBC05 /* ApiService.swift in Sources */,
 				FCC1668524381FDF00BFBC05 /* AlertMessage.swift in Sources */,
 				FCC166A024388C3300BFBC05 /* CardView.swift in Sources */,
 				FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */,
+				FCFFFFD624393FC000650FEB /* LocalStatusCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
