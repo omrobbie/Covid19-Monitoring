@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7MJ-V5-lFt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beranda-->
+        <scene sceneID="xL0-1H-o0X">
+            <objects>
+                <viewController id="7MJ-V5-lFt" customClass="HomeVC" customModule="Covid19_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WHg-eZ-PXZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFx-0n-35H" customClass="CustomUIView" customModule="Covid19_Monitoring" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="upG-rc-P9u"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-Ep-aT7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EdN-gG-7F2">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6QG-M8-SgX">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WKK-wv-8F4">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sfa-2G-N3U" firstAttribute="bottom" secondItem="Gmf-Ep-aT7" secondAttribute="bottom" id="0At-Pg-I8C"/>
+                            <constraint firstItem="AFx-0n-35H" firstAttribute="leading" secondItem="Sfa-2G-N3U" secondAttribute="leading" id="9xm-66-5DC"/>
+                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="trailing" secondItem="Sfa-2G-N3U" secondAttribute="trailing" id="U2Y-dB-vlM"/>
+                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="top" secondItem="Sfa-2G-N3U" secondAttribute="top" id="WQp-Sh-VXj"/>
+                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="leading" secondItem="Sfa-2G-N3U" secondAttribute="leading" id="a6f-V9-PYs"/>
+                            <constraint firstItem="AFx-0n-35H" firstAttribute="centerX" secondItem="WHg-eZ-PXZ" secondAttribute="centerX" id="bwK-7G-0Sx"/>
+                            <constraint firstItem="AFx-0n-35H" firstAttribute="top" secondItem="WHg-eZ-PXZ" secondAttribute="top" id="tY5-vb-U7v"/>
+                            <constraint firstItem="AFx-0n-35H" firstAttribute="trailing" secondItem="Sfa-2G-N3U" secondAttribute="trailing" id="ybE-b9-3Lq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sfa-2G-N3U"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Beranda" image="house.fill" catalog="system" id="6cy-dX-wZt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vik-FL-Org" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-155.07246376811597" y="-248.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+    </resources>
+</document>
