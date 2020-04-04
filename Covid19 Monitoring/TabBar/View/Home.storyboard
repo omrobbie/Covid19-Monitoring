@@ -31,7 +31,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gmf-Ep-aT7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EdN-gG-7F2">
                                     <size key="itemSize" width="128" height="128"/>
@@ -53,13 +53,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Sfa-2G-N3U" firstAttribute="bottom" secondItem="Gmf-Ep-aT7" secondAttribute="bottom" id="0At-Pg-I8C"/>
                             <constraint firstItem="AFx-0n-35H" firstAttribute="leading" secondItem="Sfa-2G-N3U" secondAttribute="leading" id="9xm-66-5DC"/>
-                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="trailing" secondItem="Sfa-2G-N3U" secondAttribute="trailing" id="U2Y-dB-vlM"/>
-                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="top" secondItem="Sfa-2G-N3U" secondAttribute="top" id="WQp-Sh-VXj"/>
-                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="leading" secondItem="Sfa-2G-N3U" secondAttribute="leading" id="a6f-V9-PYs"/>
+                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="top" secondItem="Sfa-2G-N3U" secondAttribute="top" id="CzW-gF-dHC"/>
+                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="bottom" secondItem="Sfa-2G-N3U" secondAttribute="bottom" id="GG6-9i-UK4"/>
+                            <constraint firstItem="Sfa-2G-N3U" firstAttribute="trailing" secondItem="Gmf-Ep-aT7" secondAttribute="trailing" constant="20" id="SML-z7-Y5N"/>
                             <constraint firstItem="AFx-0n-35H" firstAttribute="centerX" secondItem="WHg-eZ-PXZ" secondAttribute="centerX" id="bwK-7G-0Sx"/>
                             <constraint firstItem="AFx-0n-35H" firstAttribute="top" secondItem="WHg-eZ-PXZ" secondAttribute="top" id="tY5-vb-U7v"/>
+                            <constraint firstItem="Gmf-Ep-aT7" firstAttribute="leading" secondItem="Sfa-2G-N3U" secondAttribute="leading" constant="20" id="v1h-Er-cGS"/>
                             <constraint firstItem="AFx-0n-35H" firstAttribute="trailing" secondItem="Sfa-2G-N3U" secondAttribute="trailing" id="ybE-b9-3Lq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sfa-2G-N3U"/>

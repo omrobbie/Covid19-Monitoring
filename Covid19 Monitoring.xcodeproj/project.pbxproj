@@ -20,6 +20,8 @@
 		FCC166962438764600BFBC05 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC166952438764600BFBC05 /* Home.storyboard */; };
 		FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16697243876DD00BFBC05 /* HomeVC.swift */; };
 		FCC1669A243879FB00BFBC05 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC16699243879FB00BFBC05 /* TitleCell.xib */; };
+		FCC1669E2438804200BFBC05 /* LocalStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC1669D2438804200BFBC05 /* LocalStatusCell.xib */; };
+		FCC166A024388C3300BFBC05 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1669F24388C3300BFBC05 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FCC166952438764600BFBC05 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = "Covid19 Monitoring/TabBar/View/Home.storyboard"; sourceTree = SOURCE_ROOT; };
 		FCC16697243876DD00BFBC05 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FCC16699243879FB00BFBC05 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		FCC1669D2438804200BFBC05 /* LocalStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalStatusCell.xib; sourceTree = "<group>"; };
+		FCC1669F24388C3300BFBC05 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			children = (
 				FCC166812438103B00BFBC05 /* CustomUIView.swift */,
 				FCC1667F24380FC000BFBC05 /* CustomUIButton.swift */,
+				FCC1669F24388C3300BFBC05 /* CardView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			children = (
 				FCC166952438764600BFBC05 /* Home.storyboard */,
 				FCC16699243879FB00BFBC05 /* TitleCell.xib */,
+				FCC1669D2438804200BFBC05 /* LocalStatusCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC1668F2438745E00BFBC05 /* TabBar.storyboard in Resources */,
+				FCC1669E2438804200BFBC05 /* LocalStatusCell.xib in Resources */,
 				FCC166962438764600BFBC05 /* Home.storyboard in Resources */,
 				FCC1669A243879FB00BFBC05 /* TitleCell.xib in Resources */,
 				FCC1666E24378CC300BFBC05 /* LaunchScreen.storyboard in Resources */,
@@ -264,6 +271,7 @@
 				FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */,
 				FCC1666224378CC200BFBC05 /* AppDelegate.swift in Sources */,
 				FCC1668524381FDF00BFBC05 /* AlertMessage.swift in Sources */,
+				FCC166A024388C3300BFBC05 /* CardView.swift in Sources */,
 				FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
