@@ -41,7 +41,9 @@ class LoginVC: UIViewController {
         }
 
         if email == "putu.roby@yahoo.com" && password == "1234" {
-            print("Login Success!")
+            let vc = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(identifier: "TabBar")
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
         } else {
             alertMessage(sender: self, message: "Email dan password tidak sesuai. Silahkan coba kembali.", type: .warning, completion: nil)
         }
