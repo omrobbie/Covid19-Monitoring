@@ -42,6 +42,8 @@ class LoginVC: UIViewController {
 
         if email == "putu.roby@yahoo.com" && password == "1234" {
             print("Login Success!")
+        } else {
+            alertMessage(sender: self, message: "Email dan password tidak sesuai. Silahkan coba kembali.", type: .warning, completion: nil)
         }
     }
 }

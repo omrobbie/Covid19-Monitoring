@@ -15,6 +15,7 @@
 		FCC1666E24378CC300BFBC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC1666C24378CC300BFBC05 /* LaunchScreen.storyboard */; };
 		FCC1668024380FC000BFBC05 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1667F24380FC000BFBC05 /* CustomUIButton.swift */; };
 		FCC166822438103B00BFBC05 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166812438103B00BFBC05 /* CustomUIView.swift */; };
+		FCC1668524381FDF00BFBC05 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1668424381FDF00BFBC05 /* AlertMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FCC1666F24378CC300BFBC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC1667F24380FC000BFBC05 /* CustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
 		FCC166812438103B00BFBC05 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
+		FCC1668424381FDF00BFBC05 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC1667B24380ED900BFBC05 /* Login */,
+				FCC1668324381EC000BFBC05 /* Helpers */,
 				FCC1667E24380F8600BFBC05 /* CustomViews */,
 				FCC1667A24380E9400BFBC05 /* SupportingFiles */,
 				FCC1666A24378CC300BFBC05 /* Assets.xcassets */,
@@ -111,6 +114,14 @@
 				FCC1667F24380FC000BFBC05 /* CustomUIButton.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		FCC1668324381EC000BFBC05 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FCC1668424381FDF00BFBC05 /* AlertMessage.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				FCC166822438103B00BFBC05 /* CustomUIView.swift in Sources */,
 				FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */,
 				FCC1666224378CC200BFBC05 /* AppDelegate.swift in Sources */,
+				FCC1668524381FDF00BFBC05 /* AlertMessage.swift in Sources */,
 				FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
