@@ -106,7 +106,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Cu9-A9-gQk" firstAttribute="leading" secondItem="5Zx-eH-Hf2" secondAttribute="leading" id="1Zo-wB-FLK"/>
                                             <constraint firstItem="RWC-49-kku" firstAttribute="centerX" secondItem="Cu9-A9-gQk" secondAttribute="centerX" id="9WD-d4-S6k"/>
@@ -117,6 +116,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.60678768985215137" green="0.78587696712170707" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5Zx-eH-Hf2" secondAttribute="bottom" id="EUZ-pJ-RAi"/>
                                     <constraint firstItem="5Zx-eH-Hf2" firstAttribute="leading" secondItem="QFa-wr-RT3" secondAttribute="leading" id="FZJ-Mz-6fe"/>
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352.80000000000001" y="65.024630541871929"/>
+            <point key="canvasLocation" x="-263" y="52"/>
         </scene>
     </scenes>
 </document>
