@@ -21,7 +21,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Zx-eH-Hf2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="287.33333333333331"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cu9-A9-gQk">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cu9-A9-gQk" customClass="CustomUIView" customModule="Covid19_Monitoring" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="262.33333333333331"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-kY-9mN">
@@ -83,8 +83,15 @@
                                                     <constraint firstItem="2Zc-kY-9mN" firstAttribute="top" secondItem="Cu9-A9-gQk" secondAttribute="top" constant="60" id="tjF-r0-Tdt"/>
                                                     <constraint firstItem="b0B-jO-p4S" firstAttribute="centerX" secondItem="Uck-Fu-50M" secondAttribute="centerX" id="wjd-wP-c53"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWC-49-kku">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWC-49-kku" customClass="CustomUIButton" customModule="Covid19_Monitoring" customModuleProvider="target">
                                                 <rect key="frame" x="62.666666666666657" y="237.33333333333337" width="249.99999999999997" height="50"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
