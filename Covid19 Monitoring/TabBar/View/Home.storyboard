@@ -65,6 +65,9 @@
                         <viewLayoutGuide key="safeArea" id="Sfa-2G-N3U"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Beranda" image="house.fill" catalog="system" id="6cy-dX-wZt"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Gmf-Ep-aT7" id="4v3-zb-RC2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vik-FL-Org" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

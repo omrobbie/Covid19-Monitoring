@@ -19,6 +19,7 @@
 		FCC1668F2438745E00BFBC05 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC1668E2438745E00BFBC05 /* TabBar.storyboard */; };
 		FCC166962438764600BFBC05 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC166952438764600BFBC05 /* Home.storyboard */; };
 		FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16697243876DD00BFBC05 /* HomeVC.swift */; };
+		FCC1669A243879FB00BFBC05 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC16699243879FB00BFBC05 /* TitleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FCC1668E2438745E00BFBC05 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		FCC166952438764600BFBC05 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = "Covid19 Monitoring/TabBar/View/Home.storyboard"; sourceTree = SOURCE_ROOT; };
 		FCC16697243876DD00BFBC05 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		FCC16699243879FB00BFBC05 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC166952438764600BFBC05 /* Home.storyboard */,
+				FCC16699243879FB00BFBC05 /* TitleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			files = (
 				FCC1668F2438745E00BFBC05 /* TabBar.storyboard in Resources */,
 				FCC166962438764600BFBC05 /* Home.storyboard in Resources */,
+				FCC1669A243879FB00BFBC05 /* TitleCell.xib in Resources */,
 				FCC1666E24378CC300BFBC05 /* LaunchScreen.storyboard in Resources */,
 				FCC1666B24378CC300BFBC05 /* Assets.xcassets in Resources */,
 				FCC1666924378CC200BFBC05 /* Login.storyboard in Resources */,
