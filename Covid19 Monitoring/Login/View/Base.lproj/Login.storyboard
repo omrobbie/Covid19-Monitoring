@@ -101,6 +101,9 @@
                                                 <state key="normal" title="Masuk">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnLoginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1R-8i-670"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -135,6 +138,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="RWC-49-kku" id="6Tl-Oi-uYj"/>
+                        <outlet property="txtEmail" destination="Cbf-tL-PKa" id="Lgq-qh-PHM"/>
+                        <outlet property="txtEmailWarning" destination="Mzg-0Z-ydy" id="pFh-8H-QjT"/>
+                        <outlet property="txtPassword" destination="CW1-hi-UgD" id="oXS-Bg-MxW"/>
+                        <outlet property="txtPasswordWarning" destination="Vo8-Uh-OmT" id="fcC-5w-OpC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
