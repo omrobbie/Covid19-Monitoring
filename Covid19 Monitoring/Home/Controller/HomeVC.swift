@@ -14,6 +14,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var dataLocalStatus = [LocalStatusModel]()
+    var dataLocalStatusLastUpdated = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class HomeVC: UIViewController {
 
     private func loadData() {
         ApiService.shared.getDataFromCountryName(countryName: "Indonesia") { (data) in
+            self.dataLocalStatusLastUpdated = data.updated.toString(format: .longDateTime)
             self.dataLocalStatus.append(LocalStatusModel(counter: data.cases, status: POSITIF))
             self.dataLocalStatus.append(LocalStatusModel(counter: data.active, status: DALAM_PERAWATAN))
             self.dataLocalStatus.append(LocalStatusModel(counter: data.recovered, status: SEMBUH))
@@ -62,7 +64,8 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCell", for: indexPath) as! TitleCell
+            cell.parseData(lastUpdated: dataLocalStatusLastUpdated)
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LocalStatusCell", for: indexPath) as! LocalStatusCell

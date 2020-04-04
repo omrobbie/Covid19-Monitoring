@@ -6,10 +6,13 @@
 //  Copyright © 2020 omrobbie. All rights reserved.
 //
 
+import Foundation
+
 struct CovidCountryModel: Codable {
 
     let cases: Int
     let active: Int
     let recovered: Int
     let deaths: Int
+    let updated: TimeInterval
 }

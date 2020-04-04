@@ -27,6 +27,8 @@
 		FCC166A924393CB400BFBC05 /* LocalStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A824393CB400BFBC05 /* LocalStatusModel.swift */; };
 		FCFFFFD624393FC000650FEB /* LocalStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */; };
 		FCFFFFD82439451600650FEB /* LocalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD72439451600650FEB /* LocalStatus.swift */; };
+		FCFFFFDB2439487A00650FEB /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFDA2439487A00650FEB /* DateFormatter.swift */; };
+		FCFFFFE1243953CD00650FEB /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFE0243953CD00650FEB /* TitleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		FCC166A824393CB400BFBC05 /* LocalStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatusModel.swift; sourceTree = "<group>"; };
 		FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatusCell.swift; sourceTree = "<group>"; };
 		FCFFFFD72439451600650FEB /* LocalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatus.swift; sourceTree = "<group>"; };
+		FCFFFFDA2439487A00650FEB /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		FCFFFFE0243953CD00650FEB /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC1668424381FDF00BFBC05 /* AlertMessage.swift */,
+				FCFFFFDA2439487A00650FEB /* DateFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC16697243876DD00BFBC05 /* HomeVC.swift */,
+				FCFFFFE0243953CD00650FEB /* TitleCell.swift */,
 				FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */,
 			);
 			path = Controller;
@@ -318,11 +324,13 @@
 				FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */,
 				FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */,
 				FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */,
+				FCFFFFDB2439487A00650FEB /* DateFormatter.swift in Sources */,
 				FCC1666224378CC200BFBC05 /* AppDelegate.swift in Sources */,
 				FCFFFFD82439451600650FEB /* LocalStatus.swift in Sources */,
 				FCC166A324389C0E00BFBC05 /* ApiService.swift in Sources */,
 				FCC1668524381FDF00BFBC05 /* AlertMessage.swift in Sources */,
 				FCC166A024388C3300BFBC05 /* CardView.swift in Sources */,
+				FCFFFFE1243953CD00650FEB /* TitleCell.swift in Sources */,
 				FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */,
 				FCFFFFD624393FC000650FEB /* LocalStatusCell.swift in Sources */,
 			);
