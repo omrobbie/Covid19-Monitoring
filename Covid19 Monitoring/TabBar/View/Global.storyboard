@@ -55,6 +55,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rH5-7Q-fdR">
+                                                    <rect key="frame" x="42" y="33" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="vfq-h4-7Ea" firstAttribute="leading" secondItem="jNw-xR-jgX" secondAttribute="trailing" constant="8" id="5v6-a5-PPV"/>
@@ -62,12 +65,15 @@
                                                 <constraint firstItem="jNw-xR-jgX" firstAttribute="top" secondItem="7KG-VJ-qgP" secondAttribute="topMargin" id="Ndw-WB-Aom"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Ge2-AE-h2r" secondAttribute="trailing" constant="8" id="Oij-cc-8nm"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="vfq-h4-7Ea" secondAttribute="trailing" constant="8" id="TNu-26-1ci"/>
+                                                <constraint firstItem="rH5-7Q-fdR" firstAttribute="centerX" secondItem="jNw-xR-jgX" secondAttribute="centerX" id="UKq-9m-f6O"/>
                                                 <constraint firstItem="Ge2-AE-h2r" firstAttribute="top" secondItem="vfq-h4-7Ea" secondAttribute="bottom" id="ZoN-mr-wqN"/>
+                                                <constraint firstItem="rH5-7Q-fdR" firstAttribute="centerY" secondItem="jNw-xR-jgX" secondAttribute="centerY" id="po9-d0-SOH"/>
                                                 <constraint firstItem="Ge2-AE-h2r" firstAttribute="leading" secondItem="jNw-xR-jgX" secondAttribute="trailing" constant="8" id="xIN-iv-uvY"/>
                                                 <constraint firstItem="jNw-xR-jgX" firstAttribute="leading" secondItem="7KG-VJ-qgP" secondAttribute="leadingMargin" id="yB3-jC-hFB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="rH5-7Q-fdR" id="XEg-pA-arX"/>
                                             <outlet property="imgFlag" destination="jNw-xR-jgX" id="u1P-Pi-2k6"/>
                                             <outlet property="lblCases" destination="Ge2-AE-h2r" id="VTv-kg-mVn"/>
                                             <outlet property="lblCountry" destination="vfq-h4-7Ea" id="NFn-Id-AP1"/>
@@ -105,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4x-hB-pS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-14491" y="2522"/>
+            <point key="canvasLocation" x="-14483" y="2522"/>
         </scene>
         <!--Global DetailVC-->
         <scene sceneID="KRg-A1-ZJa">
@@ -123,6 +129,9 @@
                                     <constraint firstAttribute="height" constant="128" id="nu2-yr-zAb"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7EL-8w-nDg">
+                                <rect key="frame" x="197" y="166" width="20" height="20"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Negara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K69-wr-UW6">
                                 <rect key="frame" x="20" y="248" width="374" height="44"/>
                                 <constraints>
@@ -146,9 +155,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7EL-8w-nDg">
-                                <rect key="frame" x="197" y="166" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

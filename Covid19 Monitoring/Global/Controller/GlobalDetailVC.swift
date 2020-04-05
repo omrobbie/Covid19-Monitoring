@@ -11,9 +11,9 @@ import UIKit
 class GlobalDetailVC: UIViewController {
 
     @IBOutlet weak var imgFlag: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lblCountry: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var data: CovidCountryModel?
 
