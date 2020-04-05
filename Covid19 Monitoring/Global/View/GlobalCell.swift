@@ -16,7 +16,7 @@ class GlobalCell: UITableViewCell {
 
     func parseData(data: CovidCountryModel) {
         lblCountry.text = data.country
-        lblCases.text = "Junlah kasus: \(data.cases.toCommaSeperated())"
+        lblCases.text = "Jumlah kasus: \(data.cases.toCommaSeperated())"
 
         ApiService.shared.downloadImage(urlImage: data.countryInfo.flag) { (data) in
             self.imgFlag.image = UIImage(data: data)
