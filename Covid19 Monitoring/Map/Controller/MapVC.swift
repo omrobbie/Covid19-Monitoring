@@ -12,9 +12,11 @@ import MapKit
 class MapVC: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var switchAnnotation: UISwitch!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     private var dataGlobal = [CovidCountryModel]()
+    private var annotations = [MKPointAnnotation]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ class MapVC: UIViewController {
                 annotation.title = item.country
                 annotation.subtitle = "Jumlah kasus: \(item.cases.toCommaSeperated())"
                 annotation.coordinate = coordinate
+                self.annotations.append(annotation)
                 self.mapView.addAnnotation(annotation)
 
                 let overlay = MKCircle(center: coordinate, radius: self.overlayRadius(cases: item.cases))
@@ -68,6 +71,14 @@ class MapVC: UIViewController {
             return 25000
         default:
             return 15000
+        }
+    }
+
+    @IBAction func switchChanged(_ sender: Any) {
+        if switchAnnotation.isOn {
+            mapView.addAnnotations(annotations)
+        } else {
+            mapView.removeAnnotations(annotations)
         }
     }
 }

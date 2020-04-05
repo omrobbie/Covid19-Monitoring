@@ -18,6 +18,12 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iGh-jo-xGh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6T-08-XFD">
+                                <rect key="frame" x="345" y="811" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="qHA-Em-o2C" eventType="valueChanged" id="Wds-27-OPf"/>
+                                </connections>
+                            </switch>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="64m-5e-OQV">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
@@ -27,8 +33,10 @@
                             <constraint firstAttribute="bottom" secondItem="iGh-jo-xGh" secondAttribute="bottom" id="5NZ-Lc-8ha"/>
                             <constraint firstItem="64m-5e-OQV" firstAttribute="centerY" secondItem="iGh-jo-xGh" secondAttribute="centerY" id="64I-pP-VIr"/>
                             <constraint firstItem="iGh-jo-xGh" firstAttribute="leading" secondItem="K1q-ue-kb5" secondAttribute="leading" id="7TJ-kQ-A9E"/>
+                            <constraint firstItem="K1q-ue-kb5" firstAttribute="trailing" secondItem="L6T-08-XFD" secondAttribute="trailing" constant="20" id="8au-A0-lZG"/>
                             <constraint firstItem="64m-5e-OQV" firstAttribute="centerX" secondItem="iGh-jo-xGh" secondAttribute="centerX" id="Vdl-hd-JAs"/>
                             <constraint firstItem="iGh-jo-xGh" firstAttribute="trailing" secondItem="K1q-ue-kb5" secondAttribute="trailing" id="j4c-La-Oga"/>
+                            <constraint firstItem="L6T-08-XFD" firstAttribute="bottom" secondItem="K1q-ue-kb5" secondAttribute="bottom" constant="-20" id="xoO-qp-8E5"/>
                             <constraint firstItem="iGh-jo-xGh" firstAttribute="top" secondItem="RK8-xE-YRJ" secondAttribute="top" id="xy1-WN-gu5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K1q-ue-kb5"/>
@@ -37,6 +45,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="64m-5e-OQV" id="ef9-DF-m0o"/>
                         <outlet property="mapView" destination="iGh-jo-xGh" id="dZw-Jl-UZr"/>
+                        <outlet property="switchAnnotation" destination="L6T-08-XFD" id="UVF-x1-nyT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6Q-zD-CDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
