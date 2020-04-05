@@ -50,9 +50,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ea0-MF-Bpt">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Ea0-MF-Bpt">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -61,7 +60,9 @@
                             <constraint firstItem="Gmf-Ep-aT7" firstAttribute="top" secondItem="Sfa-2G-N3U" secondAttribute="top" id="CzW-gF-dHC"/>
                             <constraint firstItem="Gmf-Ep-aT7" firstAttribute="bottom" secondItem="Sfa-2G-N3U" secondAttribute="bottom" id="GG6-9i-UK4"/>
                             <constraint firstItem="Sfa-2G-N3U" firstAttribute="trailing" secondItem="Gmf-Ep-aT7" secondAttribute="trailing" constant="20" id="SML-z7-Y5N"/>
+                            <constraint firstItem="Ea0-MF-Bpt" firstAttribute="centerY" secondItem="WHg-eZ-PXZ" secondAttribute="centerY" id="W3z-lA-Uck"/>
                             <constraint firstItem="AFx-0n-35H" firstAttribute="centerX" secondItem="WHg-eZ-PXZ" secondAttribute="centerX" id="bwK-7G-0Sx"/>
+                            <constraint firstItem="Ea0-MF-Bpt" firstAttribute="centerX" secondItem="WHg-eZ-PXZ" secondAttribute="centerX" id="lI8-EX-PBo"/>
                             <constraint firstItem="AFx-0n-35H" firstAttribute="top" secondItem="WHg-eZ-PXZ" secondAttribute="top" id="tY5-vb-U7v"/>
                             <constraint firstItem="Gmf-Ep-aT7" firstAttribute="leading" secondItem="Sfa-2G-N3U" secondAttribute="leading" constant="20" id="v1h-Er-cGS"/>
                             <constraint firstItem="AFx-0n-35H" firstAttribute="trailing" secondItem="Sfa-2G-N3U" secondAttribute="trailing" id="ybE-b9-3Lq"/>

@@ -60,4 +60,25 @@ extension ApiService {
             }.resume()
         }
     }
+
+    func getDataGlobalPerCountry(completion: @escaping ([CovidCountryModel]) -> ()) {
+        if let url = URL(string: BASE_URL + COUNTRIES) {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                    return
+                }
+
+                if let data = data {
+                    let decoder = JSONDecoder()
+
+                    if let json = try? decoder.decode([CovidCountryModel].self, from: data) {
+                        DispatchQueue.main.async {
+                            completion(json.sorted(by: { $0.country < $1.country } ))
+                        }
+                    }
+                }
+            }.resume()
+        }
+    }
 }

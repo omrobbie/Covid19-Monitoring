@@ -15,4 +15,9 @@ struct CovidCountryModel: Codable {
     let recovered: Int
     let deaths: Int
     let updated: TimeInterval
+    let country: String
+
+    struct countryInfo {
+        let flag: String
+    }
 }

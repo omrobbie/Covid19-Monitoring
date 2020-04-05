@@ -33,6 +33,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-Tq-sr5">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -41,7 +44,9 @@
                             <constraint firstItem="Fxp-1N-c7P" firstAttribute="top" secondItem="P7G-On-sE6" secondAttribute="top" id="OM9-B4-jct"/>
                             <constraint firstItem="qv9-W9-9Hg" firstAttribute="leading" secondItem="P7G-On-sE6" secondAttribute="leading" id="OOK-we-j5e"/>
                             <constraint firstAttribute="bottom" secondItem="qv9-W9-9Hg" secondAttribute="bottom" id="ZSS-ez-CjE"/>
+                            <constraint firstItem="iTw-Tq-sr5" firstAttribute="centerY" secondItem="A1B-nD-7Wb" secondAttribute="centerY" id="bJJ-ft-mJ2"/>
                             <constraint firstItem="qv9-W9-9Hg" firstAttribute="top" secondItem="Fxp-1N-c7P" secondAttribute="bottom" id="bJK-T4-SjO"/>
+                            <constraint firstItem="iTw-Tq-sr5" firstAttribute="centerX" secondItem="A1B-nD-7Wb" secondAttribute="centerX" id="gkL-jQ-AZp"/>
                             <constraint firstItem="Fxp-1N-c7P" firstAttribute="leading" secondItem="P7G-On-sE6" secondAttribute="leading" id="nEd-RA-aYs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P7G-On-sE6"/>
@@ -50,6 +55,7 @@
                         <barButtonItem key="backBarButtonItem" title="Kembali" id="ggb-VO-ZgX"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="iTw-Tq-sr5" id="LtF-6O-ChB"/>
                         <outlet property="searchBar" destination="Fxp-1N-c7P" id="dtT-rW-QIs"/>
                         <outlet property="tableView" destination="qv9-W9-9Hg" id="F5q-Or-ZpZ"/>
                     </connections>

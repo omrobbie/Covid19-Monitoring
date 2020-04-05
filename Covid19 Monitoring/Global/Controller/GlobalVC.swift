@@ -12,28 +12,43 @@ class GlobalVC: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
+    var dataGlobal = [CovidCountryModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
+        loadData()
     }
 
     private func setupDelegate() {
         tableView.delegate = self
         tableView.dataSource = self
     }
+
+    private func loadData() {
+        ApiService.shared.getDataGlobalPerCountry() { (data) in
+            self.dataGlobal = data
+            self.tableView.reloadData()
+            self.activityIndicator.isHidden = true
+        }
+    }
 }
 
 extension GlobalVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dataGlobal.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalCell", for: indexPath)
+        let item = dataGlobal[indexPath.row]
+
         cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = "Item \(indexPath.row)"
+        cell.textLabel?.text = item.country
+
         return cell
     }
 }
