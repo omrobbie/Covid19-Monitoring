@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct CovidCountryModel: Codable {
 
@@ -28,5 +29,7 @@ struct CovidCountryModel: Codable {
 
     struct CountryInfo: Codable {
         let flag: String
+        let lat: CLLocationDegrees
+        let long: CLLocationDegrees
     }
 }

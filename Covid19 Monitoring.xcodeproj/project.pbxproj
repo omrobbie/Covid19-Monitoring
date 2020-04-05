@@ -25,6 +25,7 @@
 		FCC166A324389C0E00BFBC05 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A224389C0D00BFBC05 /* ApiService.swift */; };
 		FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A5243937A800BFBC05 /* CovidCountryModel.swift */; };
 		FCC166A924393CB400BFBC05 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A824393CB400BFBC05 /* StatusModel.swift */; };
+		FCFF00012439D78900650FEB /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF00002439D78900650FEB /* MapVC.swift */; };
 		FCFFFFD624393FC000650FEB /* LocalStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */; };
 		FCFFFFD82439451600650FEB /* LocalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD72439451600650FEB /* LocalStatus.swift */; };
 		FCFFFFDB2439487A00650FEB /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFDA2439487A00650FEB /* DateFormatter.swift */; };
@@ -63,6 +64,7 @@
 		FCC166A224389C0D00BFBC05 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		FCC166A5243937A800BFBC05 /* CovidCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCountryModel.swift; sourceTree = "<group>"; };
 		FCC166A824393CB400BFBC05 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		FCFF00002439D78900650FEB /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatusCell.swift; sourceTree = "<group>"; };
 		FCFFFFD72439451600650FEB /* LocalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatus.swift; sourceTree = "<group>"; };
 		FCFFFFDA2439487A00650FEB /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 		FCFFFFFC2439D65100650FEB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FCFF00002439D78900650FEB /* MapVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */,
 				FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */,
 				FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */,
+				FCFF00012439D78900650FEB /* MapVC.swift in Sources */,
 				FCFFFFFA24399C2400650FEB /* GlobalDetailVC.swift in Sources */,
 				FCFFFFEB24396CB300650FEB /* NumberFormatter.swift in Sources */,
 				FCFFFFDB2439487A00650FEB /* DateFormatter.swift in Sources */,

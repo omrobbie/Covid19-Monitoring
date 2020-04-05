@@ -10,18 +10,38 @@
         <!--Peta-->
         <scene sceneID="fIO-DV-5pG">
             <objects>
-                <viewController id="qHA-Em-o2C" sceneMemberID="viewController">
+                <viewController id="qHA-Em-o2C" customClass="MapVC" customModule="Covid19_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RK8-xE-YRJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iGh-jo-xGh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="64m-5e-OQV">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iGh-jo-xGh" secondAttribute="bottom" id="5NZ-Lc-8ha"/>
+                            <constraint firstItem="64m-5e-OQV" firstAttribute="centerY" secondItem="iGh-jo-xGh" secondAttribute="centerY" id="64I-pP-VIr"/>
+                            <constraint firstItem="iGh-jo-xGh" firstAttribute="leading" secondItem="K1q-ue-kb5" secondAttribute="leading" id="7TJ-kQ-A9E"/>
+                            <constraint firstItem="64m-5e-OQV" firstAttribute="centerX" secondItem="iGh-jo-xGh" secondAttribute="centerX" id="Vdl-hd-JAs"/>
+                            <constraint firstItem="iGh-jo-xGh" firstAttribute="trailing" secondItem="K1q-ue-kb5" secondAttribute="trailing" id="j4c-La-Oga"/>
+                            <constraint firstItem="iGh-jo-xGh" firstAttribute="top" secondItem="RK8-xE-YRJ" secondAttribute="top" id="xy1-WN-gu5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="K1q-ue-kb5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Peta" image="map.fill" catalog="system" id="CEh-LB-eqI"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="64m-5e-OQV" id="ef9-DF-m0o"/>
+                        <outlet property="mapView" destination="iGh-jo-xGh" id="dZw-Jl-UZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6Q-zD-CDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="-440"/>
+            <point key="canvasLocation" x="937.68115942028987" y="-440.625"/>
         </scene>
     </scenes>
     <resources>
