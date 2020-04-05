@@ -13,7 +13,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    var dataLocalStatus = [LocalStatusModel]()
+    var dataLocalStatus = [StatusModel]()
+    var dataWorldStatus = [StatusModel]()
     var dataLocalStatusLastUpdated = ""
 
     override func viewDidLoad() {
@@ -38,12 +39,19 @@ class HomeVC: UIViewController {
     private func loadData() {
         ApiService.shared.getDataFromCountryName(countryName: "Indonesia") { (data) in
             self.dataLocalStatusLastUpdated = data.updated.toString(format: .longDateTime)
-            self.dataLocalStatus.append(LocalStatusModel(counter: data.cases, status: POSITIF))
-            self.dataLocalStatus.append(LocalStatusModel(counter: data.active, status: DALAM_PERAWATAN))
-            self.dataLocalStatus.append(LocalStatusModel(counter: data.recovered, status: SEMBUH))
-            self.dataLocalStatus.append(LocalStatusModel(counter: data.deaths, status: MENINGGAL))
+            self.dataLocalStatus.append(StatusModel(counter: data.cases, status: POSITIF))
+            self.dataLocalStatus.append(StatusModel(counter: data.active, status: DALAM_PERAWATAN))
+            self.dataLocalStatus.append(StatusModel(counter: data.recovered, status: SEMBUH))
+            self.dataLocalStatus.append(StatusModel(counter: data.deaths, status: MENINGGAL))
             self.collectionView.reloadData()
             self.activityIndicator.isHidden = true
+        }
+
+        ApiService.shared.getDataGlobal { (data) in
+            self.dataWorldStatus.append(StatusModel(counter: data.cases, status: POSITIF))
+            self.dataWorldStatus.append(StatusModel(counter: data.recovered, status: SEMBUH))
+            self.dataWorldStatus.append(StatusModel(counter: data.deaths, status: MENINGGAL))
+            self.collectionView.reloadData()
         }
     }
 }
@@ -59,7 +67,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
         case 1:
             return dataLocalStatus.count
         case 3:
-            return 3
+            return dataWorldStatus.count
         default:
             return 1
         }
@@ -79,7 +87,8 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubTitleWorldCell", for: indexPath)
             return cell
         case 3:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WorldStatusCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WorldStatusCell", for: indexPath) as! WorldStatusCell
+            cell.parseData(data: dataWorldStatus[indexPath.row])
             return cell
         default:
             return UICollectionViewCell()

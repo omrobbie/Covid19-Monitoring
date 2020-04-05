@@ -1,5 +1,5 @@
 //
-//  LocalStatusCell.swift
+//  WorldStatusCell.swift
 //  Covid19 Monitoring
 //
 //  Created by omrobbie on 05/04/20.
@@ -8,30 +8,28 @@
 
 import UIKit
 
-class LocalStatusCell: UICollectionViewCell {
-        
+class WorldStatusCell: UICollectionViewCell {
+
+    @IBOutlet weak var viewBackground: CustomUIView!
     @IBOutlet weak var lblCounter: UILabel!
     @IBOutlet weak var lblStatus: UILabel!
 
     func parseData(data: StatusModel) {
         lblCounter.text = data.counter.toCommaSeperated()
-        lblStatus.text = data.status.capitalized
+        lblStatus.text = data.status
 
         switch data.status {
         case POSITIF:
-            lblCounter.textColor = .systemOrange
+            viewBackground.backgroundColor = .systemOrange
             lblStatus.textColor = .systemOrange
-        case DALAM_PERAWATAN:
-            lblCounter.textColor = .systemBlue
-            lblStatus.textColor = .systemBlue
         case SEMBUH:
-            lblCounter.textColor = .systemGreen
+            viewBackground.backgroundColor = .systemGreen
             lblStatus.textColor = .systemGreen
         case MENINGGAL:
-            lblCounter.textColor = .systemRed
+            viewBackground.backgroundColor = .systemRed
             lblStatus.textColor = .systemRed
         default:
-            lblCounter.textColor = .lightGray
+            viewBackground.backgroundColor = .lightGray
             lblStatus.textColor = .lightGray
         }
     }

@@ -24,13 +24,16 @@
 		FCC166A024388C3300BFBC05 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC1669F24388C3300BFBC05 /* CardView.swift */; };
 		FCC166A324389C0E00BFBC05 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A224389C0D00BFBC05 /* ApiService.swift */; };
 		FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A5243937A800BFBC05 /* CovidCountryModel.swift */; };
-		FCC166A924393CB400BFBC05 /* LocalStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A824393CB400BFBC05 /* LocalStatusModel.swift */; };
+		FCC166A924393CB400BFBC05 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC166A824393CB400BFBC05 /* StatusModel.swift */; };
 		FCFFFFD624393FC000650FEB /* LocalStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */; };
 		FCFFFFD82439451600650FEB /* LocalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD72439451600650FEB /* LocalStatus.swift */; };
 		FCFFFFDB2439487A00650FEB /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFDA2439487A00650FEB /* DateFormatter.swift */; };
 		FCFFFFE1243953CD00650FEB /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFE0243953CD00650FEB /* TitleCell.swift */; };
 		FCFFFFE32439569600650FEB /* SubTitleWorldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFFFFE22439569600650FEB /* SubTitleWorldCell.xib */; };
 		FCFFFFE524395ABE00650FEB /* WorldStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFFFFE424395ABE00650FEB /* WorldStatusCell.xib */; };
+		FCFFFFE72439699900650FEB /* CovidWorldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFE62439699900650FEB /* CovidWorldModel.swift */; };
+		FCFFFFE924396AFB00650FEB /* WorldStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFE824396AFB00650FEB /* WorldStatusCell.swift */; };
+		FCFFFFEB24396CB300650FEB /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFEA24396CB300650FEB /* NumberFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,13 +56,16 @@
 		FCC1669F24388C3300BFBC05 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FCC166A224389C0D00BFBC05 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		FCC166A5243937A800BFBC05 /* CovidCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCountryModel.swift; sourceTree = "<group>"; };
-		FCC166A824393CB400BFBC05 /* LocalStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatusModel.swift; sourceTree = "<group>"; };
+		FCC166A824393CB400BFBC05 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
 		FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatusCell.swift; sourceTree = "<group>"; };
 		FCFFFFD72439451600650FEB /* LocalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatus.swift; sourceTree = "<group>"; };
 		FCFFFFDA2439487A00650FEB /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		FCFFFFE0243953CD00650FEB /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		FCFFFFE22439569600650FEB /* SubTitleWorldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubTitleWorldCell.xib; sourceTree = "<group>"; };
 		FCFFFFE424395ABE00650FEB /* WorldStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorldStatusCell.xib; sourceTree = "<group>"; };
+		FCFFFFE62439699900650FEB /* CovidWorldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidWorldModel.swift; sourceTree = "<group>"; };
+		FCFFFFE824396AFB00650FEB /* WorldStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldStatusCell.swift; sourceTree = "<group>"; };
+		FCFFFFEA24396CB300650FEB /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 			children = (
 				FCC1668424381FDF00BFBC05 /* AlertMessage.swift */,
 				FCFFFFDA2439487A00650FEB /* DateFormatter.swift */,
+				FCFFFFEA24396CB300650FEB /* NumberFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -200,6 +207,7 @@
 				FCC16697243876DD00BFBC05 /* HomeVC.swift */,
 				FCFFFFE0243953CD00650FEB /* TitleCell.swift */,
 				FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */,
+				FCFFFFE824396AFB00650FEB /* WorldStatusCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC166A5243937A800BFBC05 /* CovidCountryModel.swift */,
+				FCFFFFE62439699900650FEB /* CovidWorldModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,7 +245,7 @@
 		FCC166A724393C7700BFBC05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FCC166A824393CB400BFBC05 /* LocalStatusModel.swift */,
+				FCC166A824393CB400BFBC05 /* StatusModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,12 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC166A924393CB400BFBC05 /* LocalStatusModel.swift in Sources */,
+				FCC166A924393CB400BFBC05 /* StatusModel.swift in Sources */,
 				FCC1668024380FC000BFBC05 /* CustomUIButton.swift in Sources */,
 				FCC166822438103B00BFBC05 /* CustomUIView.swift in Sources */,
+				FCFFFFE924396AFB00650FEB /* WorldStatusCell.swift in Sources */,
 				FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */,
 				FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */,
 				FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */,
+				FCFFFFEB24396CB300650FEB /* NumberFormatter.swift in Sources */,
 				FCFFFFDB2439487A00650FEB /* DateFormatter.swift in Sources */,
 				FCC1666224378CC200BFBC05 /* AppDelegate.swift in Sources */,
 				FCFFFFD82439451600650FEB /* LocalStatus.swift in Sources */,
@@ -340,6 +351,7 @@
 				FCC166A024388C3300BFBC05 /* CardView.swift in Sources */,
 				FCFFFFE1243953CD00650FEB /* TitleCell.swift in Sources */,
 				FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */,
+				FCFFFFE72439699900650FEB /* CovidWorldModel.swift in Sources */,
 				FCFFFFD624393FC000650FEB /* LocalStatusCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
