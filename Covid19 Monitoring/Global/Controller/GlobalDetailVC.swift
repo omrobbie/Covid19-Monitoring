@@ -10,14 +10,19 @@ import UIKit
 
 class GlobalDetailVC: UIViewController {
 
+    @IBOutlet weak var imgFlag: UIImageView!
+    @IBOutlet weak var lblCountry: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var data: CovidCountryModel?
+
+    var dataDetail = [StatusModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
-        setupUI()
+        loadData()
     }
 
     private func setupDelegate() {
@@ -25,23 +30,35 @@ class GlobalDetailVC: UIViewController {
         tableView.dataSource = self
     }
 
-    private func setupUI() {
+    private func loadData() {
         guard let data = data else {return}
 
-        print(data.country)
+        lblCountry.text = data.country
+        ApiService.shared.downloadImage(urlImage: data.countryInfo.flag) { (data) in
+            self.imgFlag.image = UIImage(data: data)
+            self.activityIndicator.isHidden = true
+        }
+
+        dataDetail.append(StatusModel(counter: data.cases, status: POSITIF))
+        dataDetail.append(StatusModel(counter: data.active, status: DALAM_PERAWATAN))
+        dataDetail.append(StatusModel(counter: data.recovered, status: SEMBUH))
+        dataDetail.append(StatusModel(counter: data.deaths, status: MENINGGAL))
     }
 }
 
 extension GlobalDetailVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dataDetail.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "GlobalDetailCell")
-        cell.textLabel?.text = "Item"
-        cell.detailTextLabel?.text = "\(indexPath.row)"
+        let item = dataDetail[indexPath.row]
+
+        cell.textLabel?.text = item.status
+        cell.detailTextLabel?.text = item.counter.toCommaSeperated()
+
         return cell
     }
 }

@@ -146,6 +146,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7EL-8w-nDg">
+                                <rect key="frame" x="197" y="166" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -155,7 +158,9 @@
                             <constraint firstItem="WzC-8X-fuu" firstAttribute="trailing" secondItem="K69-wr-UW6" secondAttribute="trailing" constant="20" id="WdE-wT-D8L"/>
                             <constraint firstItem="EcO-8G-kVA" firstAttribute="top" secondItem="K69-wr-UW6" secondAttribute="bottom" constant="24" id="cuj-1e-fhT"/>
                             <constraint firstItem="K69-wr-UW6" firstAttribute="leading" secondItem="WzC-8X-fuu" secondAttribute="leading" constant="20" id="eyG-NK-Urn"/>
+                            <constraint firstItem="7EL-8w-nDg" firstAttribute="centerY" secondItem="KIP-nK-u4L" secondAttribute="centerY" id="i3h-XQ-w9x"/>
                             <constraint firstItem="KIP-nK-u4L" firstAttribute="top" secondItem="WzC-8X-fuu" secondAttribute="top" constant="24" id="oNO-0u-usL"/>
+                            <constraint firstItem="7EL-8w-nDg" firstAttribute="centerX" secondItem="KIP-nK-u4L" secondAttribute="centerX" id="qDq-wm-4FJ"/>
                             <constraint firstItem="WzC-8X-fuu" firstAttribute="trailing" secondItem="EcO-8G-kVA" secondAttribute="trailing" id="sfP-Xb-iSK"/>
                             <constraint firstItem="EcO-8G-kVA" firstAttribute="leading" secondItem="WzC-8X-fuu" secondAttribute="leading" id="x08-57-KXp"/>
                         </constraints>
@@ -163,6 +168,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="bo1-Ug-4Rh"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="7EL-8w-nDg" id="42V-1B-D1f"/>
+                        <outlet property="imgFlag" destination="KIP-nK-u4L" id="sv7-yd-zgB"/>
+                        <outlet property="lblCountry" destination="K69-wr-UW6" id="pya-T4-iTP"/>
                         <outlet property="tableView" destination="EcO-8G-kVA" id="nkm-BI-hX6"/>
                     </connections>
                 </viewController>

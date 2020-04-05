@@ -1,5 +1,5 @@
 //
-//  LocalStatusModel.swift
+//  StatusModel.swift
 //  Covid19 Monitoring
 //
 //  Created by omrobbie on 05/04/20.
