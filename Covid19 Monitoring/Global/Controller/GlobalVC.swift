@@ -43,11 +43,11 @@ extension GlobalVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalCell", for: indexPath) as! GlobalCell
         let item = dataGlobal[indexPath.row]
 
         cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = item.country
+        cell.parseData(data: item)
 
         return cell
     }

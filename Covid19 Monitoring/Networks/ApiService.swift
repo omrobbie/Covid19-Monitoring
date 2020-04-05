@@ -17,6 +17,28 @@ class ApiService {
     private let ALL = "all"
 }
 
+// MARK: Tools
+extension ApiService {
+
+    func downloadImage(urlImage: String, completion: @escaping (Data) -> ()) {
+        if let url = URL(string: urlImage) {
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+
+                if let data = data {
+                    DispatchQueue.main.async {
+                        completion(data)
+                    }
+                }
+            }.resume()
+        }
+    }
+}
+
+// MARK: Services
 extension ApiService {
 
     func getDataFromCountryName(countryName: String, completion: @escaping (CovidCountryModel) -> ()) {

@@ -36,6 +36,7 @@
 		FCFFFFEB24396CB300650FEB /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFEA24396CB300650FEB /* NumberFormatter.swift */; };
 		FCFFFFF0243972AE00650FEB /* Global.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFFFFEF243972AE00650FEB /* Global.storyboard */; };
 		FCFFFFF22439744700650FEB /* GlobalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF12439744700650FEB /* GlobalVC.swift */; };
+		FCFFFFF6243989C000650FEB /* GlobalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF5243989C000650FEB /* GlobalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		FCFFFFEA24396CB300650FEB /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		FCFFFFEF243972AE00650FEB /* Global.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Global.storyboard; path = "Covid19 Monitoring/TabBar/View/Global.storyboard"; sourceTree = SOURCE_ROOT; };
 		FCFFFFF12439744700650FEB /* GlobalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVC.swift; sourceTree = "<group>"; };
+		FCFFFFF5243989C000650FEB /* GlobalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				FCFFFFEF243972AE00650FEB /* Global.storyboard */,
+				FCFFFFF5243989C000650FEB /* GlobalCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				FCC1668024380FC000BFBC05 /* CustomUIButton.swift in Sources */,
 				FCC166822438103B00BFBC05 /* CustomUIView.swift in Sources */,
 				FCFFFFE924396AFB00650FEB /* WorldStatusCell.swift in Sources */,
+				FCFFFFF6243989C000650FEB /* GlobalCell.swift in Sources */,
 				FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */,
 				FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */,
 				FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */,
