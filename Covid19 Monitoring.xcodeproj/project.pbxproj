@@ -39,6 +39,7 @@
 		FCFFFFF6243989C000650FEB /* GlobalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF5243989C000650FEB /* GlobalCell.swift */; };
 		FCFFFFF82439907100650FEB /* SubTitleWorldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */; };
 		FCFFFFFA24399C2400650FEB /* GlobalDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF924399C2400650FEB /* GlobalDetailVC.swift */; };
+		FCFFFFFF2439D68A00650FEB /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFFFFFE2439D68A00650FEB /* Map.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		FCFFFFF5243989C000650FEB /* GlobalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCell.swift; sourceTree = "<group>"; };
 		FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleWorldCell.swift; sourceTree = "<group>"; };
 		FCFFFFF924399C2400650FEB /* GlobalDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDetailVC.swift; sourceTree = "<group>"; };
+		FCFFFFFE2439D68A00650FEB /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Map.storyboard; path = "Covid19 Monitoring/TabBar/View/Map.storyboard"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		FCC1666024378CC200BFBC05 /* Covid19 Monitoring */ = {
 			isa = PBXGroup;
 			children = (
+				FCFFFFFB2439D64900650FEB /* Map */,
 				FCFFFFEC2439725D00650FEB /* Global */,
 				FCC166902438756300BFBC05 /* Home */,
 				FCC1668B2438741300BFBC05 /* TabBar */,
@@ -297,6 +300,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FCFFFFFB2439D64900650FEB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				FCFFFFFD2439D65700650FEB /* View */,
+				FCFFFFFC2439D65100650FEB /* Controller */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		FCFFFFFC2439D65100650FEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCFFFFFD2439D65700650FEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCFFFFFE2439D68A00650FEB /* Map.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +389,7 @@
 				FCC166962438764600BFBC05 /* Home.storyboard in Resources */,
 				FCC1669A243879FB00BFBC05 /* TitleCell.xib in Resources */,
 				FCC1666E24378CC300BFBC05 /* LaunchScreen.storyboard in Resources */,
+				FCFFFFFF2439D68A00650FEB /* Map.storyboard in Resources */,
 				FCC1666B24378CC300BFBC05 /* Assets.xcassets in Resources */,
 				FCC1666924378CC200BFBC05 /* Login.storyboard in Resources */,
 				FCFFFFF0243972AE00650FEB /* Global.storyboard in Resources */,
