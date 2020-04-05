@@ -15,6 +15,9 @@ class GlobalVC: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var dataGlobal = [CovidCountryModel]()
+    var dataSave = [CovidCountryModel]()
+
+    var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +28,13 @@ class GlobalVC: UIViewController {
     private func setupDelegate() {
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
     }
 
     private func loadData() {
         ApiService.shared.getDataGlobalPerCountry() { (data) in
             self.dataGlobal = data
+            self.dataSave = data
             self.tableView.reloadData()
             self.activityIndicator.isHidden = true
         }
@@ -50,5 +55,21 @@ extension GlobalVC: UITableViewDelegate, UITableViewDataSource {
         cell.parseData(data: item)
 
         return cell
+    }
+}
+
+extension GlobalVC: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        dataGlobal = dataSave
+        timer.invalidate()
+
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
+            if !searchText.isEmpty {
+                self.dataGlobal.removeAll { !$0.country.lowercased().contains(searchText.lowercased()) }
+            }
+            
+            self.tableView.reloadData()
+        })
     }
 }
