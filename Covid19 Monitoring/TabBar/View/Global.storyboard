@@ -139,7 +139,7 @@
         <!--Detail Penyebaran-->
         <scene sceneID="KRg-A1-ZJa">
             <objects>
-                <viewController id="Os7-fx-09B" customClass="GlobalDetailVC" customModule="Covid19_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GlobalDetailVC" id="Os7-fx-09B" customClass="GlobalDetailVC" customModule="Covid19_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K0H-Mf-xCa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +165,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-8G-kVA">
-                                <rect key="frame" x="0.0" y="316" width="414" height="546"/>
+                                <rect key="frame" x="0.0" y="316" width="414" height="580"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlobalDetailCell" id="8ZI-3B-zL1">
@@ -182,7 +182,7 @@
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="K69-wr-UW6" firstAttribute="top" secondItem="KIP-nK-u4L" secondAttribute="bottom" constant="8" id="FyS-CU-Oby"/>
-                            <constraint firstItem="EcO-8G-kVA" firstAttribute="bottom" secondItem="WzC-8X-fuu" secondAttribute="bottom" id="LxS-kz-U1B"/>
+                            <constraint firstItem="EcO-8G-kVA" firstAttribute="bottom" secondItem="K0H-Mf-xCa" secondAttribute="bottom" id="LxS-kz-U1B"/>
                             <constraint firstItem="KIP-nK-u4L" firstAttribute="centerX" secondItem="K0H-Mf-xCa" secondAttribute="centerX" id="VvL-a6-qvE"/>
                             <constraint firstItem="WzC-8X-fuu" firstAttribute="trailing" secondItem="K69-wr-UW6" secondAttribute="trailing" constant="20" id="WdE-wT-D8L"/>
                             <constraint firstItem="EcO-8G-kVA" firstAttribute="top" secondItem="K69-wr-UW6" secondAttribute="bottom" constant="24" id="cuj-1e-fhT"/>

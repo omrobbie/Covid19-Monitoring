@@ -29,7 +29,8 @@ class MapVC: UIViewController {
     private func loadData() {
         ApiService.shared.getDataGlobalPerCountry { (data) in
             data.forEach { (item) in
-                let annotation = MKPointAnnotation()
+                let annotation = PointAnnotationModel()
+                annotation.data = item
                 annotation.title = item.country
                 annotation.subtitle = "Jumlah kasus: \(item.cases.toCommaSeperated())"
                 annotation.coordinate = CLLocationCoordinate2D(latitude: item.countryInfo.lat, longitude: item.countryInfo.long)
@@ -49,5 +50,13 @@ extension MapVC: MKMapViewDelegate {
         annotationView.canShowCallout = true
         annotationView.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         return annotationView
+    }
+
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let annotation = view.annotation as? PointAnnotationModel else {return}
+        let vc = UIStoryboard(name: "Global", bundle: nil).instantiateViewController(identifier: "GlobalDetailVC") as! GlobalDetailVC
+        vc.modalPresentationStyle = .popover
+        vc.data = annotation.data
+        present(vc, animated: true, completion: nil)
     }
 }
