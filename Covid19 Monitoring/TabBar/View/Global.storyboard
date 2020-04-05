@@ -81,6 +81,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKl-xZ-eYT" customClass="CustomUIButton" customModule="Covid19_Monitoring" customModuleProvider="target">
+                                <rect key="frame" x="157" y="812" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="F9y-g0-yDz"/>
+                                    <constraint firstAttribute="height" constant="30" id="tNp-Md-Ehs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" Urutkan" image="line.horizontal.3.decrease.circle" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnSort:" destination="11r-BL-PhA" eventType="touchUpInside" id="yX0-4f-faC"/>
+                                </connections>
+                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-Tq-sr5">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                             </activityIndicatorView>
@@ -88,14 +109,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Fxp-1N-c7P" firstAttribute="trailing" secondItem="P7G-On-sE6" secondAttribute="trailing" id="1jF-Uq-bP1"/>
-                            <constraint firstItem="qv9-W9-9Hg" firstAttribute="trailing" secondItem="P7G-On-sE6" secondAttribute="trailing" id="2sn-eR-z6e"/>
+                            <constraint firstAttribute="bottom" secondItem="qv9-W9-9Hg" secondAttribute="bottom" id="2wI-tf-0Tm"/>
+                            <constraint firstItem="qv9-W9-9Hg" firstAttribute="top" secondItem="Fxp-1N-c7P" secondAttribute="bottom" id="6ic-XR-ZnX"/>
+                            <constraint firstItem="jKl-xZ-eYT" firstAttribute="centerX" secondItem="A1B-nD-7Wb" secondAttribute="centerX" id="K8C-lj-n9j"/>
+                            <constraint firstItem="P7G-On-sE6" firstAttribute="bottom" secondItem="jKl-xZ-eYT" secondAttribute="bottom" constant="20" id="MBQ-RC-d8R"/>
                             <constraint firstItem="Fxp-1N-c7P" firstAttribute="top" secondItem="P7G-On-sE6" secondAttribute="top" id="OM9-B4-jct"/>
-                            <constraint firstItem="qv9-W9-9Hg" firstAttribute="leading" secondItem="P7G-On-sE6" secondAttribute="leading" id="OOK-we-j5e"/>
-                            <constraint firstAttribute="bottom" secondItem="qv9-W9-9Hg" secondAttribute="bottom" id="ZSS-ez-CjE"/>
                             <constraint firstItem="iTw-Tq-sr5" firstAttribute="centerY" secondItem="A1B-nD-7Wb" secondAttribute="centerY" id="bJJ-ft-mJ2"/>
-                            <constraint firstItem="qv9-W9-9Hg" firstAttribute="top" secondItem="Fxp-1N-c7P" secondAttribute="bottom" id="bJK-T4-SjO"/>
                             <constraint firstItem="iTw-Tq-sr5" firstAttribute="centerX" secondItem="A1B-nD-7Wb" secondAttribute="centerX" id="gkL-jQ-AZp"/>
+                            <constraint firstItem="qv9-W9-9Hg" firstAttribute="trailing" secondItem="P7G-On-sE6" secondAttribute="trailing" id="hD3-mB-5C6"/>
                             <constraint firstItem="Fxp-1N-c7P" firstAttribute="leading" secondItem="P7G-On-sE6" secondAttribute="leading" id="nEd-RA-aYs"/>
+                            <constraint firstItem="qv9-W9-9Hg" firstAttribute="leading" secondItem="P7G-On-sE6" secondAttribute="leading" id="yuc-rc-1Vf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P7G-On-sE6"/>
                     </view>
@@ -111,9 +134,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4x-hB-pS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-14483" y="2522"/>
+            <point key="canvasLocation" x="-14482.608695652176" y="2521.875"/>
         </scene>
-        <!--Global DetailVC-->
+        <!--Detail Penyebaran-->
         <scene sceneID="KRg-A1-ZJa">
             <objects>
                 <viewController id="Os7-fx-09B" customClass="GlobalDetailVC" customModule="Covid19_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
@@ -172,7 +195,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WzC-8X-fuu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bo1-Ug-4Rh"/>
+                    <navigationItem key="navigationItem" title="Detail Penyebaran" id="bo1-Ug-4Rh"/>
                     <connections>
                         <outlet property="activityIndicator" destination="7EL-8w-nDg" id="42V-1B-D1f"/>
                         <outlet property="imgFlag" destination="KIP-nK-u4L" id="sv7-yd-zgB"/>
@@ -207,5 +230,6 @@
     <resources>
         <image name="flag" catalog="system" width="128" height="121"/>
         <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="line.horizontal.3.decrease.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

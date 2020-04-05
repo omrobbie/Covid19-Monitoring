@@ -29,4 +29,16 @@ class CustomUIButton: UIButton {
     private func setupUI() {
         layer.cornerRadius = cornerRadius
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+
+        UIView.animate(withDuration: 0.2, delay: 0, options: .autoreverse, animations: {
+            self.imageView?.alpha = 0.5
+            self.titleLabel?.alpha = 0.5
+        }, completion: { _ in
+            self.imageView?.alpha = 1
+            self.titleLabel?.alpha = 1
+        })
+    }
 }

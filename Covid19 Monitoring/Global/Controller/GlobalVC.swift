@@ -49,6 +49,41 @@ class GlobalVC: UIViewController {
             self.activityIndicator.isHidden = true
         }
     }
+
+    @IBAction func btnSort(_ sender: Any) {
+        let alertVC = UIAlertController(title: "Urutkan berdasarkan", message: nil, preferredStyle: .actionSheet)
+
+        let actionCancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+
+
+        let actionCases = UIAlertAction(title: "Kasus terbanyak", style: .default) { (_) in
+            self.dataGlobal.sort(by: { $0.cases > $1.cases } )
+            self.tableView.reloadData()
+        }
+
+        let actionDeaths = UIAlertAction(title: "Kematian terbanyak", style: .default) { (_) in
+            self.dataGlobal.sort(by: { $0.deaths > $1.deaths } )
+            self.tableView.reloadData()
+        }
+
+        let actionActive = UIAlertAction(title: "Dalam perawatan terbanyak", style: .default) { (_) in
+            self.dataGlobal.sort(by: { $0.active > $1.active } )
+            self.tableView.reloadData()
+        }
+
+        let actionRecovered = UIAlertAction(title: "Sembuh terbanyak", style: .default) { (_) in
+            self.dataGlobal.sort(by: { $0.recovered > $1.recovered } )
+            self.tableView.reloadData()
+        }
+
+        alertVC.addAction(actionCases)
+        alertVC.addAction(actionDeaths)
+        alertVC.addAction(actionActive)
+        alertVC.addAction(actionRecovered)
+        alertVC.addAction(actionCancel)
+
+        present(alertVC, animated: true, completion: nil)
+    }
 }
 
 extension GlobalVC: UITableViewDelegate, UITableViewDataSource {
