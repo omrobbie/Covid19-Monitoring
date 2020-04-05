@@ -35,6 +35,7 @@
 		FCFFFFE924396AFB00650FEB /* WorldStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFE824396AFB00650FEB /* WorldStatusCell.swift */; };
 		FCFFFFEB24396CB300650FEB /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFEA24396CB300650FEB /* NumberFormatter.swift */; };
 		FCFFFFF0243972AE00650FEB /* Global.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFFFFEF243972AE00650FEB /* Global.storyboard */; };
+		FCFFFFF22439744700650FEB /* GlobalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF12439744700650FEB /* GlobalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		FCFFFFE824396AFB00650FEB /* WorldStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldStatusCell.swift; sourceTree = "<group>"; };
 		FCFFFFEA24396CB300650FEB /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		FCFFFFEF243972AE00650FEB /* Global.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Global.storyboard; path = "Covid19 Monitoring/TabBar/View/Global.storyboard"; sourceTree = SOURCE_ROOT; };
+		FCFFFFF12439744700650FEB /* GlobalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 		FCFFFFED2439729100650FEB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FCFFFFF12439744700650FEB /* GlobalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */,
 				FCFFFFE72439699900650FEB /* CovidWorldModel.swift in Sources */,
 				FCFFFFD624393FC000650FEB /* LocalStatusCell.swift in Sources */,
+				FCFFFFF22439744700650FEB /* GlobalVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
