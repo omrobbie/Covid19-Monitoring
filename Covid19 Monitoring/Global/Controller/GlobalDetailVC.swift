@@ -17,7 +17,10 @@ class GlobalDetailVC: UIViewController {
 
     var data: CovidCountryModel?
 
-    var dataDetail = [StatusModel]()
+    var dataCases = [StatusModel]()
+    var dataDeaths = [StatusModel]()
+    var dataActive = [StatusModel]()
+    var dataRecovered = [StatusModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,22 +42,65 @@ class GlobalDetailVC: UIViewController {
             self.activityIndicator.isHidden = true
         }
 
-        dataDetail.append(StatusModel(counter: data.cases, status: POSITIF))
-        dataDetail.append(StatusModel(counter: data.active, status: DALAM_PERAWATAN))
-        dataDetail.append(StatusModel(counter: data.recovered, status: SEMBUH))
-        dataDetail.append(StatusModel(counter: data.deaths, status: MENINGGAL))
+        dataCases.append(StatusModel(counter: data.cases, status: CASES))
+        dataCases.append(StatusModel(counter: data.todayCases, status: TODAY_CASES))
+
+        dataDeaths.append(StatusModel(counter: data.deaths, status: DEATHS))
+        dataDeaths.append(StatusModel(counter: data.todayDeaths, status: TODAY_DEATHS))
+
+        dataActive.append(StatusModel(counter: data.active, status: ACTIVE))
+        dataActive.append(StatusModel(counter: data.critical, status: CRITICAL))
+
+        dataRecovered.append(StatusModel(counter: data.recovered, status: RECOVERED))
     }
 }
 
 extension GlobalDetailVC: UITableViewDelegate, UITableViewDataSource {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 4
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return CASES
+        case 1:
+            return DEATHS
+        case 2:
+            return ACTIVE
+        default:
+            return RECOVERED
+        }
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataDetail.count
+        switch section {
+        case 0:
+            return dataCases.count
+        case 1:
+            return dataDeaths.count
+        case 2:
+            return dataActive.count
+        default:
+            return dataRecovered.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "GlobalDetailCell")
-        let item = dataDetail[indexPath.row]
+        var item: StatusModel
+
+        switch indexPath.section {
+        case 0 :
+            item = dataCases[indexPath.row]
+        case 1 :
+            item = dataDeaths[indexPath.row]
+        case 2 :
+            item = dataActive[indexPath.row]
+        default:
+            item = dataRecovered[indexPath.row]
+        }
 
         cell.textLabel?.text = item.status
         cell.detailTextLabel?.text = item.counter.toCommaSeperated()

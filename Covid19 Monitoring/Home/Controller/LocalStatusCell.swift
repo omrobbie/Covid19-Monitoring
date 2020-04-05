@@ -18,16 +18,16 @@ class LocalStatusCell: UICollectionViewCell {
         lblStatus.text = data.status.capitalized
 
         switch data.status {
-        case POSITIF:
+        case CASES:
             lblCounter.textColor = .systemOrange
             lblStatus.textColor = .systemOrange
-        case DALAM_PERAWATAN:
+        case ACTIVE:
             lblCounter.textColor = .systemBlue
             lblStatus.textColor = .systemBlue
-        case SEMBUH:
+        case RECOVERED:
             lblCounter.textColor = .systemGreen
             lblStatus.textColor = .systemGreen
-        case MENINGGAL:
+        case DEATHS:
             lblCounter.textColor = .systemRed
             lblStatus.textColor = .systemRed
         default:

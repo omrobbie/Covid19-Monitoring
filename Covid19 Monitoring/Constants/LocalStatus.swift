@@ -1,12 +1,18 @@
 //
-//  Constants.swift
+//  LocalStatus.swift
 //  Covid19 Monitoring
 //
 //  Created by omrobbie on 05/04/20.
 //  Copyright © 2020 omrobbie. All rights reserved.
 //
 
-let POSITIF = "Positif"
-let DALAM_PERAWATAN = "Dalam Perawatan"
-let SEMBUH = "Sembuh"
-let MENINGGAL = "Meninggal"
+let CASES = "Positif"
+let TODAY_CASES = "Positif per hari ini"
+
+let DEATHS = "Meninggal"
+let TODAY_DEATHS = "Meninggal per hari ini"
+
+let ACTIVE = "Dalam Perawatan"
+let CRITICAL = "Masa Kritis"
+
+let RECOVERED = "Sembuh"

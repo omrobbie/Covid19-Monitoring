@@ -19,13 +19,13 @@ class WorldStatusCell: UICollectionViewCell {
         lblStatus.text = data.status
 
         switch data.status {
-        case POSITIF:
+        case CASES:
             viewBackground.backgroundColor = .systemOrange
             lblStatus.textColor = .systemOrange
-        case SEMBUH:
+        case RECOVERED:
             viewBackground.backgroundColor = .systemGreen
             lblStatus.textColor = .systemGreen
-        case MENINGGAL:
+        case DEATHS:
             viewBackground.backgroundColor = .systemRed
             lblStatus.textColor = .systemRed
         default:

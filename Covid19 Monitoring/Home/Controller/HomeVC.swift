@@ -41,17 +41,17 @@ class HomeVC: UIViewController {
     private func loadData() {
         ApiService.shared.getDataFromCountryName(countryName: "Indonesia") { (data) in
             self.dataLocalStatusLastUpdated = data.updated.toString(format: .longDateTime)
-            self.dataLocalStatus.append(StatusModel(counter: data.cases, status: POSITIF))
-            self.dataLocalStatus.append(StatusModel(counter: data.active, status: DALAM_PERAWATAN))
-            self.dataLocalStatus.append(StatusModel(counter: data.recovered, status: SEMBUH))
-            self.dataLocalStatus.append(StatusModel(counter: data.deaths, status: MENINGGAL))
+            self.dataLocalStatus.append(StatusModel(counter: data.cases, status: CASES))
+            self.dataLocalStatus.append(StatusModel(counter: data.active, status: ACTIVE))
+            self.dataLocalStatus.append(StatusModel(counter: data.recovered, status: RECOVERED))
+            self.dataLocalStatus.append(StatusModel(counter: data.deaths, status: DEATHS))
             self.loadDataCheck()
         }
 
         ApiService.shared.getDataGlobal { (data) in
-            self.dataWorldStatus.append(StatusModel(counter: data.cases, status: POSITIF))
-            self.dataWorldStatus.append(StatusModel(counter: data.recovered, status: SEMBUH))
-            self.dataWorldStatus.append(StatusModel(counter: data.deaths, status: MENINGGAL))
+            self.dataWorldStatus.append(StatusModel(counter: data.cases, status: CASES))
+            self.dataWorldStatus.append(StatusModel(counter: data.recovered, status: RECOVERED))
+            self.dataWorldStatus.append(StatusModel(counter: data.deaths, status: DEATHS))
             self.loadDataCheck()
         }
     }

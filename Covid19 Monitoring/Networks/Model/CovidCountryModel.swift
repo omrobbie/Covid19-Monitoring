@@ -1,5 +1,5 @@
 //
-//  CovidCountry.swift
+//  CovidCountryModel.swift
 //  Covid19 Monitoring
 //
 //  Created by omrobbie on 05/04/20.
@@ -10,12 +10,20 @@ import Foundation
 
 struct CovidCountryModel: Codable {
 
-    let cases: Int
-    let active: Int
-    let recovered: Int
-    let deaths: Int
-    let updated: TimeInterval
     let country: String
+
+    let cases: Int
+    let todayCases: Int
+
+    let deaths: Int
+    let todayDeaths: Int
+
+    let recovered: Int
+    let critical: Int
+
+    let active: Int
+
+    let updated: TimeInterval
     let countryInfo: CountryInfo
 
     struct CountryInfo: Codable {
