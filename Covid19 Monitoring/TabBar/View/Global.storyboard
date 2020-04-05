@@ -99,11 +99,28 @@
                         <outlet property="activityIndicator" destination="iTw-Tq-sr5" id="LtF-6O-ChB"/>
                         <outlet property="searchBar" destination="Fxp-1N-c7P" id="dtT-rW-QIs"/>
                         <outlet property="tableView" destination="qv9-W9-9Hg" id="F5q-Or-ZpZ"/>
+                        <segue destination="Os7-fx-09B" kind="show" identifier="GlobalDetailVC" id="Ees-KR-1eq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4x-hB-pS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476.8115942028987" y="176.78571428571428"/>
+            <point key="canvasLocation" x="-14491" y="2522"/>
+        </scene>
+        <!--Global DetailVC-->
+        <scene sceneID="KRg-A1-ZJa">
+            <objects>
+                <viewController id="Os7-fx-09B" customClass="GlobalDetailVC" customModule="Covid19_Monitoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K0H-Mf-xCa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="WzC-8X-fuu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bo1-Ug-4Rh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEK-Ra-LZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13696" y="2522"/>
         </scene>
         <!--Global-->
         <scene sceneID="ULc-Ky-Di1">
@@ -122,7 +139,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xT3-lA-EF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566.66666666666674" y="176.78571428571428"/>
+            <point key="canvasLocation" x="-15401" y="2522"/>
         </scene>
     </scenes>
     <resources>

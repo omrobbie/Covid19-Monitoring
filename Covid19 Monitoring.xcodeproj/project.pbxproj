@@ -38,6 +38,7 @@
 		FCFFFFF22439744700650FEB /* GlobalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF12439744700650FEB /* GlobalVC.swift */; };
 		FCFFFFF6243989C000650FEB /* GlobalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF5243989C000650FEB /* GlobalCell.swift */; };
 		FCFFFFF82439907100650FEB /* SubTitleWorldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */; };
+		FCFFFFFA24399C2400650FEB /* GlobalDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF924399C2400650FEB /* GlobalDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		FCFFFFF12439744700650FEB /* GlobalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVC.swift; sourceTree = "<group>"; };
 		FCFFFFF5243989C000650FEB /* GlobalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCell.swift; sourceTree = "<group>"; };
 		FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleWorldCell.swift; sourceTree = "<group>"; };
+		FCFFFFF924399C2400650FEB /* GlobalDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				FCFFFFF12439744700650FEB /* GlobalVC.swift */,
+				FCFFFFF924399C2400650FEB /* GlobalDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				FCC166A6243937A800BFBC05 /* CovidCountryModel.swift in Sources */,
 				FCC1666624378CC200BFBC05 /* LoginVC.swift in Sources */,
 				FCC16698243876DD00BFBC05 /* HomeVC.swift in Sources */,
+				FCFFFFFA24399C2400650FEB /* GlobalDetailVC.swift in Sources */,
 				FCFFFFEB24396CB300650FEB /* NumberFormatter.swift in Sources */,
 				FCFFFFDB2439487A00650FEB /* DateFormatter.swift in Sources */,
 				FCC1666224378CC200BFBC05 /* AppDelegate.swift in Sources */,

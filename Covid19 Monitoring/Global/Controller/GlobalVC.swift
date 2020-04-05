@@ -25,6 +25,16 @@ class GlobalVC: UIViewController {
         loadData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GlobalDetailVC" {
+            if let vc = segue.destination as? GlobalDetailVC {
+                if let data = sender as? CovidCountryModel {
+                    vc.data = data
+                }
+            }
+        }
+    }
+
     private func setupDelegate() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -56,6 +66,10 @@ extension GlobalVC: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "GlobalDetailVC", sender: dataGlobal[indexPath.row])
+    }
 }
 
 extension GlobalVC: UISearchBarDelegate {
@@ -68,7 +82,7 @@ extension GlobalVC: UISearchBarDelegate {
             if !searchText.isEmpty {
                 self.dataGlobal.removeAll { !$0.country.lowercased().contains(searchText.lowercased()) }
             }
-            
+
             self.tableView.reloadData()
         })
     }
