@@ -15,7 +15,9 @@ class HomeVC: UIViewController {
 
     var dataLocalStatus = [StatusModel]()
     var dataWorldStatus = [StatusModel]()
+
     var dataLocalStatusLastUpdated = ""
+    var loadDataCount = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +45,23 @@ class HomeVC: UIViewController {
             self.dataLocalStatus.append(StatusModel(counter: data.active, status: DALAM_PERAWATAN))
             self.dataLocalStatus.append(StatusModel(counter: data.recovered, status: SEMBUH))
             self.dataLocalStatus.append(StatusModel(counter: data.deaths, status: MENINGGAL))
-            self.collectionView.reloadData()
-            self.activityIndicator.isHidden = true
+            self.loadDataCheck()
         }
 
         ApiService.shared.getDataGlobal { (data) in
             self.dataWorldStatus.append(StatusModel(counter: data.cases, status: POSITIF))
             self.dataWorldStatus.append(StatusModel(counter: data.recovered, status: SEMBUH))
             self.dataWorldStatus.append(StatusModel(counter: data.deaths, status: MENINGGAL))
+            self.loadDataCheck()
+        }
+    }
+
+    private func loadDataCheck() {
+        loadDataCount += 1
+
+        if loadDataCount >= 2 {
             self.collectionView.reloadData()
+            self.activityIndicator.isHidden = true
         }
     }
 }
@@ -84,7 +94,8 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             cell.parseData(data: dataLocalStatus[indexPath.row])
             return cell
         case 2:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubTitleWorldCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubTitleWorldCell", for: indexPath) as! SubTitleWorldCell
+            cell.lblSubTitle.isHidden = !activityIndicator.isHidden
             return cell
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WorldStatusCell", for: indexPath) as! WorldStatusCell

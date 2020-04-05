@@ -37,6 +37,7 @@
 		FCFFFFF0243972AE00650FEB /* Global.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFFFFEF243972AE00650FEB /* Global.storyboard */; };
 		FCFFFFF22439744700650FEB /* GlobalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF12439744700650FEB /* GlobalVC.swift */; };
 		FCFFFFF6243989C000650FEB /* GlobalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF5243989C000650FEB /* GlobalCell.swift */; };
+		FCFFFFF82439907100650FEB /* SubTitleWorldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		FCFFFFEF243972AE00650FEB /* Global.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Global.storyboard; path = "Covid19 Monitoring/TabBar/View/Global.storyboard"; sourceTree = SOURCE_ROOT; };
 		FCFFFFF12439744700650FEB /* GlobalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVC.swift; sourceTree = "<group>"; };
 		FCFFFFF5243989C000650FEB /* GlobalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCell.swift; sourceTree = "<group>"; };
+		FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleWorldCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				FCFFFFE0243953CD00650FEB /* TitleCell.swift */,
 				FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */,
 				FCFFFFE824396AFB00650FEB /* WorldStatusCell.swift */,
+				FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				FCC166A324389C0E00BFBC05 /* ApiService.swift in Sources */,
 				FCC1668524381FDF00BFBC05 /* AlertMessage.swift in Sources */,
 				FCC166A024388C3300BFBC05 /* CardView.swift in Sources */,
+				FCFFFFF82439907100650FEB /* SubTitleWorldCell.swift in Sources */,
 				FCFFFFE1243953CD00650FEB /* TitleCell.swift in Sources */,
 				FCC1666424378CC200BFBC05 /* SceneDelegate.swift in Sources */,
 				FCFFFFE72439699900650FEB /* CovidWorldModel.swift in Sources */,
