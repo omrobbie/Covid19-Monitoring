@@ -223,10 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				FCC16697243876DD00BFBC05 /* HomeVC.swift */,
-				FCFFFFE0243953CD00650FEB /* TitleCell.swift */,
-				FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */,
-				FCFFFFE824396AFB00650FEB /* WorldStatusCell.swift */,
-				FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -236,9 +232,13 @@
 			children = (
 				FCC166952438764600BFBC05 /* Home.storyboard */,
 				FCC16699243879FB00BFBC05 /* TitleCell.xib */,
+				FCFFFFE0243953CD00650FEB /* TitleCell.swift */,
 				FCC1669D2438804200BFBC05 /* LocalStatusCell.xib */,
+				FCFFFFD524393FC000650FEB /* LocalStatusCell.swift */,
 				FCFFFFE22439569600650FEB /* SubTitleWorldCell.xib */,
+				FCFFFFF72439907100650FEB /* SubTitleWorldCell.swift */,
 				FCFFFFE424395ABE00650FEB /* WorldStatusCell.xib */,
+				FCFFFFE824396AFB00650FEB /* WorldStatusCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

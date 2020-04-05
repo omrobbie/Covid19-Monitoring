@@ -14,10 +14,10 @@ class GlobalVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    var dataGlobal = [CovidCountryModel]()
-    var dataSave = [CovidCountryModel]()
+    private var dataGlobal = [CovidCountryModel]()
+    private var dataSave = [CovidCountryModel]()
 
-    var timer = Timer()
+    private var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,10 +17,10 @@ class GlobalDetailVC: UIViewController {
 
     var data: CovidCountryModel?
 
-    var dataCases = [StatusModel]()
-    var dataDeaths = [StatusModel]()
-    var dataActive = [StatusModel]()
-    var dataRecovered = [StatusModel]()
+    private var dataCases = [StatusModel]()
+    private var dataDeaths = [StatusModel]()
+    private var dataActive = [StatusModel]()
+    private var dataRecovered = [StatusModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,7 +14,7 @@ class MapVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    var dataGlobal = [CovidCountryModel]()
+    private var dataGlobal = [CovidCountryModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

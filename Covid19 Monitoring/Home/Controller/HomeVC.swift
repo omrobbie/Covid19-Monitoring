@@ -13,11 +13,11 @@ class HomeVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
-    var dataLocalStatus = [StatusModel]()
-    var dataWorldStatus = [StatusModel]()
+    private var dataLocalStatus = [StatusModel]()
+    private var dataWorldStatus = [StatusModel]()
 
-    var dataLocalStatusLastUpdated = ""
-    var loadDataCount = 0
+    private var dataLocalStatusLastUpdated = ""
+    private var loadDataCount = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
