@@ -61,17 +61,29 @@ extension GlobalDetailVC: UITableViewDelegate, UITableViewDataSource {
         return 4
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let x = 5, y = 5
+        let width = tableView.frame.width
+        let returnedView = UIView(frame: CGRect(x: x, y: y, width: Int(width), height: 20))
+        let label = UILabel(frame: CGRect(x: x, y: y, width: Int(width), height: 20))
+
         switch section {
         case 0:
-            return CASES
+            returnedView.backgroundColor = .systemOrange
+            label.text = CASES
         case 1:
-            return DEATHS
+            returnedView.backgroundColor = .systemRed
+            label.text = DEATHS
         case 2:
-            return ACTIVE
+            returnedView.backgroundColor = .systemBlue
+            label.text = ACTIVE
         default:
-            return RECOVERED
+            returnedView.backgroundColor = .systemGreen
+            label.text = RECOVERED
         }
+
+        returnedView.addSubview(label)
+        return returnedView
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
