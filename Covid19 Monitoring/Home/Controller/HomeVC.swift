@@ -31,6 +31,8 @@ class HomeVC: UIViewController {
     private func setupRegisterNib() {
         collectionView.register(UINib(nibName: "TitleCell", bundle: nil), forCellWithReuseIdentifier: "TitleCell")
         collectionView.register(UINib(nibName: "LocalStatusCell", bundle: nil), forCellWithReuseIdentifier: "LocalStatusCell")
+        collectionView.register(UINib(nibName: "SubTitleWorldCell", bundle: nil), forCellWithReuseIdentifier: "SubTitleWorldCell")
+        collectionView.register(UINib(nibName: "WorldStatusCell", bundle: nil), forCellWithReuseIdentifier: "WorldStatusCell")
     }
 
     private func loadData() {
@@ -49,13 +51,15 @@ class HomeVC: UIViewController {
 extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 4
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 1:
             return dataLocalStatus.count
+        case 3:
+            return 3
         default:
             return 1
         }
@@ -71,6 +75,12 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LocalStatusCell", for: indexPath) as! LocalStatusCell
             cell.parseData(data: dataLocalStatus[indexPath.row])
             return cell
+        case 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubTitleWorldCell", for: indexPath)
+            return cell
+        case 3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WorldStatusCell", for: indexPath)
+            return cell
         default:
             return UICollectionViewCell()
         }
@@ -82,6 +92,9 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             let width = (collectionView.frame.width / 2) - 8
             let height = width / 1.2
             return CGSize(width: width, height: height)
+        case 3:
+            let width = (collectionView.bounds.width / 3) - 8
+            return CGSize(width: width, height: 100)
         default:
             let size = collectionView.frame
             return CGSize(width: size.width, height: size.height)

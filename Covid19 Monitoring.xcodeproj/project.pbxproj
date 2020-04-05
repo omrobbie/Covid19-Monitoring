@@ -29,6 +29,8 @@
 		FCFFFFD82439451600650FEB /* LocalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFD72439451600650FEB /* LocalStatus.swift */; };
 		FCFFFFDB2439487A00650FEB /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFDA2439487A00650FEB /* DateFormatter.swift */; };
 		FCFFFFE1243953CD00650FEB /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFFFFE0243953CD00650FEB /* TitleCell.swift */; };
+		FCFFFFE32439569600650FEB /* SubTitleWorldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFFFFE22439569600650FEB /* SubTitleWorldCell.xib */; };
+		FCFFFFE524395ABE00650FEB /* WorldStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFFFFE424395ABE00650FEB /* WorldStatusCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		FCFFFFD72439451600650FEB /* LocalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStatus.swift; sourceTree = "<group>"; };
 		FCFFFFDA2439487A00650FEB /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		FCFFFFE0243953CD00650FEB /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		FCFFFFE22439569600650FEB /* SubTitleWorldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubTitleWorldCell.xib; sourceTree = "<group>"; };
+		FCFFFFE424395ABE00650FEB /* WorldStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorldStatusCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 				FCC166952438764600BFBC05 /* Home.storyboard */,
 				FCC16699243879FB00BFBC05 /* TitleCell.xib */,
 				FCC1669D2438804200BFBC05 /* LocalStatusCell.xib */,
+				FCFFFFE22439569600650FEB /* SubTitleWorldCell.xib */,
+				FCFFFFE424395ABE00650FEB /* WorldStatusCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC1668F2438745E00BFBC05 /* TabBar.storyboard in Resources */,
+				FCFFFFE32439569600650FEB /* SubTitleWorldCell.xib in Resources */,
+				FCFFFFE524395ABE00650FEB /* WorldStatusCell.xib in Resources */,
 				FCC1669E2438804200BFBC05 /* LocalStatusCell.xib in Resources */,
 				FCC166962438764600BFBC05 /* Home.storyboard in Resources */,
 				FCC1669A243879FB00BFBC05 /* TitleCell.xib in Resources */,
