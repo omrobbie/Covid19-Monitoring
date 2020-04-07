@@ -18,6 +18,10 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Fxp-1N-c7P">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qv9-W9-9Hg">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>

@@ -121,4 +121,13 @@ extension GlobalVC: UISearchBarDelegate {
             self.tableView.reloadData()
         })
     }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
+    }
 }
