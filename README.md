@@ -13,3 +13,8 @@ Bagi yang mau melihat video Webinar-nya, bisa saksikan langsung klik link di baw
 <img src="https://github.com/omrobbie/Covid19-Monitoring/blob/master/screenshot/preview4.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/Covid19-Monitoring/blob/master/screenshot/preview5.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/Covid19-Monitoring/blob/master/screenshot/preview6.png" width=256 />&nbsp;
+
+### Adapt to Dark Mode
+<img src="https://github.com/omrobbie/Covid19-Monitoring/blob/master/screenshot/preview7.png" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/Covid19-Monitoring/blob/master/screenshot/preview8.png" width=256 />&nbsp;
+<img src="https://github.com/omrobbie/Covid19-Monitoring/blob/master/screenshot/preview9.png" width=256 />&nbsp;
