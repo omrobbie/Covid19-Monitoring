@@ -42,5 +42,7 @@ class CardView: UIView {
         layer.shadowColor = shadowColor.cgColor
         layer.shadowOpacity = shadowOpacity
         layer.shadowPath = shadowPath.cgPath
+        layer.borderColor = UIColor.darkGray.cgColor
+        layer.borderWidth = 0.5
     }
 }

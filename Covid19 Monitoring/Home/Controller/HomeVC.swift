@@ -114,7 +114,7 @@ extension HomeVC: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
             return CGSize(width: width, height: height)
         case 3:
             let width = (collectionView.bounds.width / 3) - 8
-            return CGSize(width: width, height: 100)
+            return CGSize(width: width, height: 80)
         default:
             let size = collectionView.frame
             return CGSize(width: size.width, height: size.height)
